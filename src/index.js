@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './styles.module.css'
+import FormFields from './form_fields.js'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+// export const ExampleComponent = ({ text }) => {
+//   return <div>Example Component: {text}</div>
+// }
+export default FormFields
