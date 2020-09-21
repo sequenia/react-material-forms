@@ -1,7 +1,7 @@
 import React from 'react'
 
 import FormFields from '@sequenia/react-material-forms';
-import { DescribingModel } from '@sequenia/describing-model';
+import DescribingModel from '@sequenia/describing-model';
 
 class SomeModel extends DescribingModel {
  
@@ -73,7 +73,8 @@ class SomeModel extends DescribingModel {
 const SomeModelInstance = new SomeModel();
 
 const App = () => {
-  return <FormFields formFields = { SomeModelInstance.formFields() } />
+  return <FormFields formFields = { SomeModelInstance.formFields() } 
+  item = { { name: "test" } } />
 }
 
 export default App

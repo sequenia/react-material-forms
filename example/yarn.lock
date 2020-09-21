@@ -1363,7 +1363,7 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@material-ui/core@^4.9.0":
+"@material-ui/core@^4.11.0":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.11.0.tgz#b69b26e4553c9e53f2bfaf1053e216a0af9be15a"
   integrity sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
@@ -1459,18 +1459,17 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@sequenia/describing-model@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@sequenia/describing-model/-/describing-model-0.0.1.tgz#c1cf2cbba622ee37a0b92b98d9eaaa0e83388bf5"
-  integrity sha512-/vZuntBgf6kQe5fxWEIju1HJ0ZpcY2rYqnHt8oHL2DuCHaH1qTAmGNZP/mYziCbtzJAJYgsegy9fJuFLuXSZBA==
+"@sequenia/describing-model@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@sequenia/describing-model/-/describing-model-0.0.2.tgz#3392c39818f8a1e5f905397da68170f734c5c042"
+  integrity sha512-fb7DMyzGGBN8EEfu2I4Y6464S0DvVdeCxGYoXDtUy+3FBP/cOcBjvLpDAMvPVALCLox79IyP1nPoRvGTP/zfzQ==
 
-"@sequenia/react-material-fields@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@sequenia/react-material-fields/-/react-material-fields-1.0.0.tgz#57edec2adce77099c41eebb3f5ff7e6702361aa0"
-  integrity sha512-7ZcjNOVGQ3dma/ToHuHwZ8YnwtG/jObgxgtOeUVPBB7boHFQmCNSJO47WifKiPyNCp1ruCG0YgX5N7OZosn+Xw==
+"@sequenia/react-material-fields@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@sequenia/react-material-fields/-/react-material-fields-1.0.2.tgz#1db481f7b53d6915e75293a8569019ea6cc87df2"
+  integrity sha512-MmGWaGmd9ck9V+uuAWUTMBnYRnfa9i2rigUnOIIy9Qxh9ZdkaTJdqPcffbpbrnqiijIvmytIERf7azRBklQO4w==
   dependencies:
     "@date-io/moment" "1.x"
-    "@material-ui/core" "^4.9.0"
     "@material-ui/icons" "^4.5.1"
     "@material-ui/pickers" "^3.2.10"
     "@material-ui/styles" "^4.9.0"

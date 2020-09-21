@@ -24,6 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
+    "@material-ui/core": "^4.9.0",
     "react": "^16.0.0"
   },
   "devDependencies": {
@@ -51,7 +52,11 @@
     "dist"
   ],
   "dependencies": {
-    "@sequenia/react-material-fields": "^1.0.0",
-    "react-is": "^16.13.1"
+    "@material-ui/core": "^4.11.0",
+    "@sequenia/react-material-fields": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react-grid-layout": "^1.1.1",
+    "react-is": "^16.13.1",
+    "recompose": "^0.30.0"
   }
 }

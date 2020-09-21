@@ -10,7 +10,7 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
-    "@sequenia/describing-model": "^0.0.1",
+    "@sequenia/describing-model": "^0.0.2",
     "@sequenia/react-material-forms": "link:..",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",

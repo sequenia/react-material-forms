@@ -3,21 +3,21 @@ import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { withStyles } from '@material-ui/styles'
 import { Grid } from '@material-ui/core'
+import NestedModelField from './nested_model_field.js'
+import NestedModelsArrayField from './nested_models_array_field.js'
 
 import {
   Checkbox,
   TextField,
   PasswordField,
   SelectField,
+  RemoteSelectField,
   PhoneField,
   DateTimeField,
   DecimalField,
   ImageField,
   FileField
 } from '@sequenia/react-material-fields'
-
-// import NestedModelField from './fields/nested_model_field.js'
-// import NestedModelsArrayField from './fields/nested_models_array_field.js'
 
 const styles = (theme) => ({
   root: {},
@@ -206,54 +206,54 @@ class FormFields extends React.Component {
         />
       )
     }
-    // if (field.type === 'nestedModel') {
-    //   let formFields = []
-    //   if (field.fields) {
-    //     formFields = field.fields(field, value)
-    //   } else if (field.model) {
-    //     formFields = field.model.nestedFormFields(field, { item: value })
-    //   }
-    //   return (
-    //     <NestedModelField
-    //       value={value}
-    //       onChange={(value) => this.onChangeFieldValue(field, value)}
-    //       autoSaveTimeout={autoSaveTimeout}
-    //       allowAutoSave={allowAutoSave}
-    //       parentField={field}
-    //       formFields={formFields}
-    //       errorData={errorData[field.name]}
-    //       defaultWeight={this.props.defaultWeight}
-    //       {...field}
-    //       readOnly={readOnly || field.readOnly}
-    //       name={name}
-    //     />
-    //   )
-    // }
-    // if (field.type === 'nestedModelsArray') {
-    //   let formFields = []
-    //   if (field.fields) {
-    //     formFields = field.fields(field, value)
-    //   } else if (field.model) {
-    //     formFields = field.model.nestedFormFields(field, { item: value })
-    //   }
-    //   const objectErrors = errorData[field.name] || []
-    //   return (
-    //     <NestedModelsArrayField
-    //       values={value}
-    //       onChange={(value) => this.onChangeFieldValue(field, value)}
-    //       autoSaveTimeout={autoSaveTimeout}
-    //       allowAutoSave={allowAutoSave}
-    //       parentField={field}
-    //       formFields={formFields}
-    //       errors={fieldsErrorData[field.name]}
-    //       objectErrors={objectErrors}
-    //       defaultWeight={field.defaultWeight || this.props.defaultWeight}
-    //       {...field}
-    //       readOnly={readOnly || field.readOnly}
-    //       name={name}
-    //     />
-    //   )
-    // }
+    if (field.type === 'nestedModel') {
+      let formFields = []
+      if (field.fields) {
+        formFields = field.fields(field, value)
+      } else if (field.model) {
+        formFields = field.model.nestedFormFields(field, { item: value })
+      }
+      return (
+        <NestedModelField
+          value={value}
+          onChange={(value) => this.onChangeFieldValue(field, value)}
+          autoSaveTimeout={autoSaveTimeout}
+          allowAutoSave={allowAutoSave}
+          parentField={field}
+          formFields={formFields}
+          errorData={errorData[field.name]}
+          defaultWeight={this.props.defaultWeight}
+          {...field}
+          readOnly={readOnly || field.readOnly}
+          name={name}
+        />
+      )
+    }
+    if (field.type === 'nestedModelsArray') {
+      let formFields = []
+      if (field.fields) {
+        formFields = field.fields(field, value)
+      } else if (field.model) {
+        formFields = field.model.nestedFormFields(field, { item: value })
+      }
+      const objectErrors = errorData[field.name] || []
+      return (
+        <NestedModelsArrayField
+          values={value}
+          onChange={(value) => this.onChangeFieldValue(field, value)}
+          autoSaveTimeout={autoSaveTimeout}
+          allowAutoSave={allowAutoSave}
+          parentField={field}
+          formFields={formFields}
+          errors={fieldsErrorData[field.name]}
+          objectErrors={objectErrors}
+          defaultWeight={field.defaultWeight || this.props.defaultWeight}
+          {...field}
+          readOnly={readOnly || field.readOnly}
+          name={name}
+        />
+      )
+    }
     if (field.type === 'decimal') {
       return (
         <DecimalField
@@ -292,19 +292,19 @@ class FormFields extends React.Component {
         />
       )
     }
-    // if (field.type === 'model') {
-    //   return (
-    //     <ModelField
-    //       value={value}
-    //       valueId={this.item[field.foreignKey]}
-    //       onChange={(value) => this.onChangeFieldValue(field, value)}
-    //       errors={fieldsErrorData[field.name]}
-    //       {...field}
-    //       readOnly={readOnly || field.readOnly}
-    //       name={name}
-    //     />
-    //   )
-    // }
+    if (field.type === 'model') {
+      return (
+        <RemoteSelectField
+          value={value}
+          valueId={this.item[field.foreignKey]}
+          onChange={(value) => this.onChangeFieldValue(field, value)}
+          errors={fieldsErrorData[field.name]}
+          {...field}
+          readOnly={readOnly || field.readOnly}
+          name={name}
+        />
+      )
+    }
     if (field.type === 'boolean') {
       return (
         <Checkbox
