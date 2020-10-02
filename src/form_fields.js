@@ -126,8 +126,12 @@ class FormFields extends React.Component {
   }
 
   formField(field) {
-    const { onChange } = this.props
-    const { autoSaveTimeout, allowAutoSave, onValueTimeUp } = this.props
+    const {
+      autoSaveTimeout,
+      allowAutoSave,
+      onChange,
+      onValueTimeUp
+    } = this.props
 
     const { errorData, readOnly } = this.state
     const { fields: fieldsErrorData = {} } = errorData
