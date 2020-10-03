@@ -1,5 +1,4 @@
 import React from 'react'
-
 import "./index.css";
 import FormFields from '@sequenia/react-material-forms';
 import DescribingModel from '@sequenia/describing-model';
