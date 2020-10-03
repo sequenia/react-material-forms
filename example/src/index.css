@@ -22,7 +22,7 @@ p {
 
 .MuiGrid-container {
   margin: 0 -10px;
-  width: auto;
+  width: auto !important;
 }
 
 .MuiGrid-item {

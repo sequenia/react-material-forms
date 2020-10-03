@@ -1,6 +1,6 @@
 {
   "name": "@sequenia/react-material-forms",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "form blocks based on @sequenia/react-material-fields",
   "author": "sequenia",
   "license": "MIT",
@@ -53,8 +53,9 @@
     "dist"
   ],
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
+    "@material-ui/styles": "^4.9.0",
     "@sequenia/react-material-fields": "^1.0.2",
+    "clsx": "^1.0.2",
     "prop-types": "^15.7.2",
     "react-grid-layout": "^1.1.1",
     "react-is": "^16.13.1",
