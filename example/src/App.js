@@ -4,6 +4,8 @@ import "./index.css";
 import FormFields from '@sequenia/react-material-forms';
 import DescribingModel from '@sequenia/describing-model';
 import AddressModel from './address_model.js';
+import CompanyPersonModel from './company_person_model.js';
+import uuidv4 from 'uuid/v4';
 
 const salutationEnum = [
   {
@@ -46,7 +48,6 @@ class PersonalInfoModel extends DescribingModel {
 
 
   formFields(item = undefined) {
-    console.log(AddressModel.formFields({item: item}));
     return [
         {
           name: "salutation",
@@ -119,7 +120,25 @@ class PersonalInfoModel extends DescribingModel {
           type: "nestedModel",
           weight: 12,
           fields: (parentField, item) => AddressModel.formFields({item}),
-        }
+        },
+        {
+          name: "people",
+          type: "nestedModelsArray",
+          weight: 12,
+          itemWeight: 12,
+          addText: "Add company person",
+          defaultWeight: 6,
+          allowDragDrop: false,
+          allowDelete: true,
+          fields: (parentField, item) => {
+            return CompanyPersonModel.formFields({item: item});
+          },
+          defaultItem: (items) => {
+            return {
+              clientId: uuidv4(),
+            }
+          }
+        },
     ]
   }
 }
@@ -135,9 +154,6 @@ const App = () => {
       <FormFields formFields = { PersonalInfoModelInstance.formFields() } 
                   errorData = { errorDataExample }
                   item = { personalItems } />
-    </section>
-    <section className = "section">
-      <h3>Nested model field</h3>
     </section>
   </div> 
 }
